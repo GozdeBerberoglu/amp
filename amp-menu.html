@@ -1,0 +1,347 @@
+<!doctype html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  
+  <style amp-custom>
+  body{
+    font: 16px/150% 'Roboto', sans-serif;
+    color: #333;
+  }
+
+  .wrapper{
+    width: 80%;
+    margin: 0 auto
+  }
+
+  h1{ 
+    font-size: 30px;
+    line-height: 120%;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #FCB131;
+  }
+
+  h2{ 
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #7AC6E7;
+  }
+  
+  p{margin-bottom: 20px}
+
+  a{
+    text-decoration: underline;
+    font-weight: 500;
+    color: inherit;
+  }
+
+  .wrapper ul{
+    margin: 20px
+  }
+
+  /* sidebar */
+    amp-sidebar {
+      width: 300px;
+      max-width: 300px;
+    }
+
+    
+    .blue-box{
+      height: 60px;
+      width: 60px;
+      display: block;
+      background: #0086BF;
+      text-align: center;
+      line-height: 60px;
+      color: #fff;
+      border: 0;
+      outline: none;
+    }
+  
+    .amp-close {
+      position: absolute;      
+      right: 0;
+      top:0;      
+      color: #7AC6E7;
+      cursor: pointer;
+      z-index: 5;
+      font-size: 30px;
+      border: 0
+    }
+    
+
+    #sidebar-right nav.amp-sidebar-toolbar-target-shown {
+        display: none;
+    }
+
+    /*tab*/
+
+    .ampTabContainer {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .ampTabContainer ul{
+      margin: 0;
+      padding: 0
+    }
+
+    .ampTabContainer li {
+        list-style: none;        
+    }
+
+    .ampTabContainer li a,.ampTabContainer li h4{
+        text-decoration: none;
+        padding: 10px 0;
+        display: block;     
+        font-weight: 500
+    }
+
+     .ampTabContainer li ul{
+        padding: 0;
+        margin-left: 20px 
+    }
+
+    
+    .tabButton[selected] {
+        outline: none;
+        background: #fff;
+        color: #0086BF;
+    }
+    
+    .tabButton {
+        position: absolute;        
+        right: 0;
+        top:0;
+    }   
+
+    .tabButton:nth-child(1) {
+        top:60px;
+    }
+
+    .tabButton:nth-child(3) {
+        top:120px;
+    }
+
+    .tabButton:nth-child(5) {
+        top:180px;
+    }
+
+    .tabButton:nth-child(7) {
+        top:240px;
+    }
+
+    .tabButton:nth-child(9) {
+        top:300px;
+    }
+    .tabButton:nth-child(11) {
+        top:360px;
+    }
+
+    .tabContent {
+        display: none;
+        width: calc(100% - 70px);
+        order: 1; /* must be greater than the order of the tab buttons to flex to the next line */
+        margin: 10px;
+    }
+    
+    .tabButton[selected]+.tabContent {
+        display: block;
+    }
+
+    
+    amp-selector {
+      
+    }
+
+    amp-selector [option][selected]{outline:none;}
+
+   .ampTabContainer li h4{
+      border: 0; 
+      outline: none
+    }
+
+    amp-accordion h4:after{
+      content:"▼";
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    amp-accordion section[expanded] h4:after{
+      content:"▲";
+    }
+
+  </style>
+</head>
+<body>
+
+<button on="tap:sidebar.toggle" class="blue-box ampstart-btn caps m2">MENU</button>
+<section class="wrapper">
+  
+
+  <h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
+  elit</h1>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit. Aenean commodo ligula eget dolor. Aenean massa 
+  <strong>strong</strong>. Cum sociis natoque penatibus 
+  et magnis dis parturient montes, nascetur ridiculus 
+  mus. Donec quam felis, ultricies nec, pellentesque 
+  eu, pretium quis, sem. Nulla consequat massa quis 
+  enim. Donec pede justo, fringilla vel, aliquet nec, 
+  vulputate eget, arcu. In enim justo, rhoncus ut, 
+  imperdiet a, venenatis vitae, justo. Nullam dictum 
+  felis eu pede <a class="external ext" href="#">link</a> 
+  mollis pretium. Integer tincidunt. Cras dapibus. 
+  Vivamus elementum semper nisi. Aenean vulputate 
+  eleifend tellus. Aenean leo ligula, porttitor eu, 
+  consequat vitae, eleifend ac, enim. Aliquam lorem ante, 
+  dapibus in, viverra quis, feugiat a, tellus. Phasellus 
+  viverra nulla ut metus varius laoreet. Quisque rutrum. 
+  Aenean imperdiet. Etiam ultricies nisi vel augue. 
+  Curabitur ullamcorper ultricies nisi.</p>
+  <h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
+  elit</h1>
+  <h2>Aenean commodo ligula eget dolor aenean massa</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+  Cum sociis natoque penatibus et magnis dis parturient 
+  montes, nascetur ridiculus mus. Donec quam felis, 
+  ultricies nec, pellentesque eu, pretium quis, sem.</p>
+  <h2>Aenean commodo ligula eget dolor aenean massa</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+  Cum sociis natoque penatibus et magnis dis parturient 
+  montes, nascetur ridiculus mus. Donec quam felis, 
+  ultricies nec, pellentesque eu, pretium quis, sem.</p>
+  <ul>
+    <li>Lorem ipsum dolor sit amet consectetuer.</li>
+    <li>Aenean commodo ligula eget dolor.</li>
+    <li>Aenean massa cum sociis natoque penatibus.</li>
+  </ul>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+  Cum sociis natoque penatibus et magnis dis parturient 
+  montes, nascetur ridiculus mus. Donec quam felis, 
+  ultricies nec, pellentesque eu, pretium quis, sem.</p>
+</section>
+
+
+
+ <amp-sidebar id="sidebar" layout="nodisplay"  side="right">
+
+  <button class="blue-box amp-close" on="tap:sidebar.close" role="button"
+    tabindex="0">x</button>
+  
+  <amp-selector role="tablist"  layout="container"  class="ampTabContainer">
+
+  <div role="tab"    class="blue-box tabButton"    selected    option="a">1</div>
+  <div role="tabpanel"    class="tabContent">
+      <h2>Catogory 1</h2>
+      <ul>
+        <li><a href="">Lorem ipsum</a></li>
+        <li>
+           <amp-accordion id="hidden-header" disable-session-states>
+            <section>
+              <h4 class="show-more">Consectetur</h4>
+              <ul>
+                <li><a href="">Porttitor</a></li>
+                <li><a href="">Pellentesque</a></li>
+                <li><a href="">Tellus</a></li>
+                <li><a href="">Maecenas</a></li>
+                <li><a href="">Luctus</a></li>
+                <li><a href="">Ultrices</a></li>
+              </ul>
+            </section>
+          </amp-accordion>         
+        </li>
+        <li><a href="">Potenti</a></li>
+        <li><a href="">Accumsan</a></li>
+        <li><a href="">Mauris</a></li>
+        <li><a href="">Dolor sit amet</a></li>
+      </ul>
+   </div>
+
+  <div role="tab"    class="blue-box tabButton" option="b">2</div>
+  <div role="tabpanel"    class="tabContent">
+    <h2>Catogory 2</h2>
+    <ul>
+        <li><a href="">Augue</a></li>
+        <li><a href="">Quis</a></li>
+        <li><a href="">Adipiscing</a></li>
+        <li><a href="">Lobortis</a></li>
+        <li><a href="">Pellentesque</a></li>
+        <li><a href="">Maecenas</a></li>
+      </ul>
+  </div>
+
+  <div role="tab"    class="blue-box tabButton" option="c">3</div>
+  <div role="tabpanel"    class="tabContent">
+    <h2>Catogory 3</h2>
+    <ul>
+        <li><a href="">Commodo</a></li>
+        <li><a href="">Placerat</a></li>
+        <li><a href="">Porta</a></li>
+        <li><a href="">Augue</a></li>
+        <li><a href="">Quis</a></li>
+        <li><a href="">Adipiscing</a></li>
+      </ul>
+  </div>
+
+  <div role="tab"    class="blue-box tabButton" option="c">4</div>
+  <div role="tabpanel"    class="tabContent">
+    <h2>Catogory 4</h2>
+    <ul>
+        <li><a href="">Mauris</a></li>
+        <li><a href="">Nisi</a></li>
+        <li><a href="">Metus</a></li>
+        <li><a href="">Suspendisse</a></li>
+        <li><a href="">Potenti</a></li>
+        <li><a href="">Accumsan</a></li>
+      </ul>
+  </div>
+
+  <div role="tab"    class="blue-box tabButton" option="c">5</div>
+  <div role="tabpanel"    class="tabContent">
+    <h2>Catogory 5</h2>
+    <ul>
+        <li><a href="">Lobortis</a></li>
+        <li><a href="">Pellentesque</a></li>
+        <li><a href="">Maecenas</a></li>
+        <li><a href="">Commodo</a></li>
+        <li><a href="">Placerat</a></li>
+        <li><a href="">Porta</a></li>
+      </ul>
+  </div>
+
+  <div role="tab"    class="blue-box tabButton" option="c">6</div>
+  <div role="tabpanel"    class="tabContent">
+    <h2>Catogory 6</h2>
+    <ul>
+        <li><a href="">Suspendisse</a></li>
+        <li><a href="">Potenti</a></li>
+        <li><a href="">Accumsan</a></li>
+        <li><a href="">Mauris</a></li>
+        <li><a href="">Nisi</a></li>
+        <li><a href="">Metus</a></li>
+      </ul>
+  </div>
+
+
+</amp-selector>
+
+</amp-sidebar>
+
+</body>
+</html>
